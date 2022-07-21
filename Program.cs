@@ -9,7 +9,7 @@ builder.Logging.AddAzureWebAppDiagnostics();
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<MyDatabaseContext>(options =>
-                    options.UseSqlite("Data Source=localdatabase.db"));
+                    options.UseSqlServer("Data Source=appserver789789.database.windows.net,1433;Initial Catalog=appdb;User ID=sqladmin;Password=Testpass123"));
 
 var app = builder.Build();
 
